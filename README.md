@@ -21,6 +21,7 @@ It contains:
 ## Installation
 
 git clone https://github.com/duduxico-dungeonmite/fedora-update.git
+
 cd fedora-update
 
 chmod +x fedora-update
