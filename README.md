@@ -1,5 +1,5 @@
 # fedora-update
-Simple "arch-update" Fedora equivalent!
+Fedora equivalent of "arch-update"!
 
 ## This was originally a vibe-coded tool. Changes to the code for polish and general upgrades are more than welcome!
 
