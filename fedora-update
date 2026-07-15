@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+# Define styling colors
+GREEN='\0033[0;32m'
+BLUE='\0033[0;34m'
+YELLOW='\0033[1;33m'
+RED='\0033[0;31m'
+NC='\0033[0m' # No Color
+
+echo -e "${BLUE}=== Starting Fedora System Update with Safety Snapshot ===${NC}\n"
+
+# 1. Btrfs Snapshot Creation
+echo -e "${YELLOW}[1/5] Checking Btrfs Snapper configurations...${NC}"
+
+if command -v snapper &> /dev/null && sudo snapper list-configs | grep -q "root"; then
+    echo -e "${GREEN}Snapper root config detected. Creating pre-update system snapshot...${NC}"
+
+    # Generate timestamped snapshot name
+    SNAP_DESC="Pre-Upgrade_$(date +%Y-%m-%d_%H-%M)"
+
+    # Run snapper to create a "single" type manual snapshot before package modifications
+    if sudo snapper create --type single --description "$SNAP_DESC" --cleanup-algorithm number; then
+        echo -e "${GREEN}Snapshot successfully created: '$SNAP_DESC'${NC}"
+    else
+        echo -e "${RED}Warning: Snapshot creation failed! Proceeding with caution...${NC}"
+    fi
+else
+    echo -e "${RED}Error: Snapper root configuration not found.${NC}"
+    echo -e "Please configure Snapper in Btrfs Assistant first. Skipping snapshot... \n"
+fi
+
+# 2. Refresh repositories and upgrade system packages
+echo -e "\n${YELLOW}[2/5] Upgrading DNF packages...${NC}"
+sudo dnf upgrade --refresh -y
+
+# 3. Upgrade Flatpak applications
+if command -v flatpak &> /dev/null; then
+    echo -e "\n${YELLOW}[3/5] Upgrading Flatpak applications...${NC}"
+    flatpak update -y
+else
+    echo -e "\n${BLUE}[3/5] Flatpak not found. Skipping...${NC}"
+fi
+
+# 4. Clean up cached metadata and old system packages
+echo -e "\n${YELLOW}[4/5] Cleaning up system package cache...${NC}"
+sudo dnf autoremove -y
+sudo dnf clean all
+
+# 5. Check if a system reboot is required
+echo -e "\n${YELLOW}[5/5] Checking if a reboot is needed...${NC}"
+if command -v tracer &> /dev/null; then
+    sudo tracer
+elif [ -f /var/run/reboot-required ]; then
+    echo -e "${YELLOW}A system reboot is highly recommended.${NC}"
+else
+    echo -e "No immediate reboot required."
+fi
+
+echo -e "\n${GREEN}=== Fedora System Update Complete! ===${NC}"
