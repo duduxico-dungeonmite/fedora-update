@@ -3,7 +3,7 @@ Fedora equivalent of "arch-update"!
 
 ## This was originally a vibe-coded tool. Changes to the code for polish and general upgrades are more than welcome!
 
-"fedora-update" is basically something akin to "arch-update" from Arch Linux.
+"fedora-update" is basically something akin to "arch-update" from Arch Linux, but you guessed it: for Fedora!
 
 It contains:
 - Snapper snapshot creation before the update
