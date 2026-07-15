@@ -1,5 +1,19 @@
 #!/usr/bin/env bash
 
+# fedora-update
+# Copyright (C) 2026 Eduardo Mancia
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# See <https://www.gnu.org/licenses/>.
+
 # Define styling colors
 GREEN='\0033[0;32m'
 BLUE='\0033[0;34m'
@@ -15,10 +29,8 @@ echo -e "${YELLOW}[1/5] Checking Btrfs Snapper configurations...${NC}"
 if command -v snapper &> /dev/null && sudo snapper list-configs | grep -q "root"; then
     echo -e "${GREEN}Snapper root config detected. Creating pre-update system snapshot...${NC}"
 
-    # Generate timestamped snapshot name
     SNAP_DESC="Pre-Upgrade_$(date +%Y-%m-%d_%H-%M)"
 
-    # Run snapper to create a "single" type manual snapshot before package modifications
     if sudo snapper create --type single --description "$SNAP_DESC" --cleanup-algorithm number; then
         echo -e "${GREEN}Snapshot successfully created: '$SNAP_DESC'${NC}"
     else
