@@ -8,7 +8,7 @@ Fedora equivalent of "arch-update"!
 It contains:
 - Snapper snapshot creation before the update
 - Updates to DNF and Flatpak packages
-- Package cache clearence
+- Package cache cleanup
 - Checks for reboots if needed!
 
 ## Requirements
