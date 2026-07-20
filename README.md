@@ -11,6 +11,9 @@ It contains:
 - Package cache cleanup
 - Checks for reboots if needed!
 
+# RUST PORT IN DEVELOPMENT.
+## If you are intrested in downloading fedora-update, PLEASE install the Bash (vibe coded) version first.
+
 ## Requirements
 
 - Fedora (This was built using Fedora 44 KDE)
