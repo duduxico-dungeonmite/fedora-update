@@ -21,9 +21,6 @@ It contains:
 This branch is a work-in-progress Rust rewrite and isn't ready to be installed/built yet.
 Check the `main` branch for the working Bash version.
 
-<img width="1920" height="656" alt="image" src="https://github.com/user-attachments/assets/59c21062-dc81-40d9-a73b-a3c291f0363b" />
-^ the tool working on my PC! (Bash ver.)
-
 ## Credits
 
 fedora-update is heavily inspired by Arch Linux maintainer Robin Candau (Antiz96)'s tool "arch-update" (https://github.com/Antiz96/arch-update). This project is not affiliated with Arch Linux, nor Antiz96.
