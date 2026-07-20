@@ -1,7 +1,5 @@
-# fedora-update
+# fedora-update | WORK IN PROGRESS, PLEASE CHECK main FOR THE NORMAL, WORKING VERSION OF fedora-update!
 Fedora equivalent of "arch-update"!
-
-## This was originally a vibe-coded tool. Changes to the code for polish and general upgrades are more than welcome!
 
 "fedora-update" is basically something akin to "arch-update" from Arch Linux, but you guessed it: for Fedora!
 
@@ -28,7 +26,7 @@ chmod +x fedora-update
 sudo cp fedora-update /usr/local/bin/
 
 <img width="1920" height="656" alt="image" src="https://github.com/user-attachments/assets/59c21062-dc81-40d9-a73b-a3c291f0363b" />
-^ the tool working on my PC!
+^ the tool working on my PC! (Bash ver.)
 
 ## Credits
 
