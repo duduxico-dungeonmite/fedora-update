@@ -1,7 +1,8 @@
 # fedora-update
 Fedora equivalent of "arch-update"!
 
-## This was originally a vibe-coded tool. Changes to the code for polish and general upgrades are more than welcome!
+# RUST PORT IN DEVELOPMENT.
+## If you are intrested in downloading fedora-update, PLEASE install the Bash (vibe coded) version first.
 
 "fedora-update" is basically something akin to "arch-update" from Arch Linux, but you guessed it: for Fedora!
 
@@ -10,9 +11,6 @@ It contains:
 - Updates to DNF and Flatpak packages
 - Package cache cleanup
 - Checks for reboots if needed!
-
-# RUST PORT IN DEVELOPMENT.
-## If you are intrested in downloading fedora-update, PLEASE install the Bash (vibe coded) version first.
 
 ## Requirements
 
