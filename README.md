@@ -15,6 +15,8 @@ It contains:
 - Snapper
 - Btrfs
 - Flatpak (optional)
+- Rust
+- Cargo
 
 ## Installation
 
