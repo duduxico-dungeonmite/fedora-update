@@ -22,19 +22,19 @@ pub fn reboot_check() {
 
                 if answer == "y" || answer == "yes" {
                     for i in (1..=5).rev() {
-                    println!("Rebooting in {} seconds. Press Ctrl + C to quit.", i);
+                    println!("{}", format!("Rebooting in {} seconds. Press Ctrl + C to quit.", i).red());
                         thread::sleep(Duration::from_secs(1));
                     }
                     let _ = Command::new("sudo").arg("reboot").status();
                 } else {
-                    println!("Some core packages may not work properly while in this session. Rebooting is highly recommended.");
+                    println!("{}", "Some core packages may not work properly while in this session. Rebooting is highly recommended.".red());
                 }
             }
             Some(code) => {
-                eprintln!("needs-restarting exited with unexpected code: {}", code);
+                eprintln!("{}", format!("needs-restarting exited with unexpected code: {}", code).yellow());
             }
             None => {
-                eprintln!("Process terminated without an exit code.");
+                eprintln!("{}", "Process terminated without an exit code.".yellow());
             }
         },
         Err(e) => {
