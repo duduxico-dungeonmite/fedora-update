@@ -1,5 +1,4 @@
 use rand::seq::IndexedRandom;
-use rand::rng;
 
 pub fn end_quote() {
     let quotes= [
@@ -14,7 +13,10 @@ pub fn end_quote() {
         "Bash is easier, they said.",
         "If you found a bug, no you didn't.",
         "Hey you, you're finally... well, you just went to sleep again.",
-        "Rust is easier, they... Wait-"
+        "Rust is easier, they... Wait-",
+        "If updating is sure to result in stability, then you should update! Sun Tzu said that, probably.",
+        "Is this..? MON DIEU!!",
+        "I fear no man... But that thing... It scares me."
     ];
     if let Some(quote) = quotes.choose(&mut rand::rng()) {
         println!("=={}==", quote);
