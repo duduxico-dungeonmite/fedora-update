@@ -1,5 +1,6 @@
 use crate::cache_clean::cleanup;
 use crate::quotes::end_quote;
+use crate::snapshot::snapshot_make;
 use crate::update_dnf::update_dnf;
 use crate::update_flatpak::update_flatpak;
 
@@ -8,9 +9,11 @@ mod quotes;
 mod update_flatpak;
 mod command;
 mod cache_clean;
+mod snapshot;
 
 fn main() {
     println!("Hello, from fedora-update!");
+    snapshot_make();
     update_dnf();
     update_flatpak();
     cleanup();
