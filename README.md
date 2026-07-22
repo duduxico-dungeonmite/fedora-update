@@ -31,6 +31,11 @@ On your Linux terminal, use these commands:
 
 `sudo cp target/release/fedora-update /usr/local/bin/`
 
+<img width="1920" height="611" alt="image" src="https://github.com/user-attachments/assets/05261381-a329-43ab-acc2-5e6884955e7a" />
+
+fedora-update working on my machine!
+
+
 
 ## Credits
 
