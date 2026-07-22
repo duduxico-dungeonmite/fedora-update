@@ -21,15 +21,13 @@ It contains:
 
 ## Installation
 
+On your Linux terminal, use these commands:
+
 git clone https://github.com/duduxico-dungeonmite/fedora-update.git
-
 cd fedora-update
+cargo build --release
+sudo cp target/release/fedora-update /usr/local/bin/
 
-chmod +x fedora-update
-sudo cp fedora-update /usr/local/bin/
-
-<img width="1920" height="656" alt="image" src="https://github.com/user-attachments/assets/59c21062-dc81-40d9-a73b-a3c291f0363b" />
-^ the tool working on my PC!
 
 ## Credits
 
