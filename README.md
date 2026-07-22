@@ -1,7 +1,6 @@
 # fedora-update
 Fedora equivalent of "arch-update"!
 
-# RUST PORT IN DEVELOPMENT! Contributions on the `rust_port` branch are more than welcome!
 
 "fedora-update" is basically something akin to "arch-update" from Arch Linux, but you guessed it: for Fedora!
 
@@ -17,6 +16,8 @@ It contains:
 - Snapper
 - Btrfs
 - Flatpak (optional)
+- Cargo
+- Rust
 
 ## Installation
 
