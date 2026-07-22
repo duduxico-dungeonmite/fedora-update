@@ -4,7 +4,7 @@ use crate::reboot::reboot_check;
 use crate::snapshot::snapshot_make;
 use crate::update_dnf::update_dnf;
 use crate::update_flatpak::update_flatpak;
-
+use colored::Colorize;
 mod update_dnf;
 mod quotes;
 mod update_flatpak;
@@ -14,7 +14,7 @@ mod snapshot;
 mod reboot;
 
 fn main() {
-    println!("Hello, from fedora-update!");
+    println!("{}", "Hello, from fedora-update!".purple());
     snapshot_make();
     update_dnf();
     update_flatpak();

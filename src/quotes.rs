@@ -1,3 +1,4 @@
+use colored::Colorize;
 use rand::seq::IndexedRandom;
 
 pub fn end_quote() {
@@ -19,7 +20,7 @@ pub fn end_quote() {
         "I fear no man... But that thing... It scares me."
     ];
     if let Some(quote) = quotes.choose(&mut rand::rng()) {
-        println!("=={}==", quote);
+        println!("{}", format!("=={}==", quote).purple());
     }
 }
 

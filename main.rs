@@ -12,7 +12,7 @@ mod cache_clean;
 mod snapshot;
 
 fn main() {
-    greeting();
+    println!("{}", "Hello, from fedora-update!".purple());
     snapshot_make();
     update_dnf();
     update_flatpak();

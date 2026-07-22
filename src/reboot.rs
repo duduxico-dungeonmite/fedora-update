@@ -2,6 +2,8 @@ use std::process::Command;
 use std::io::{self, Write};
 use std::thread;
 use std::time::Duration;
+use colored::Colorize;
+
 pub fn reboot_check() {
     let status = Command::new("needs-restarting")
         .args(["-r"])
@@ -10,10 +12,10 @@ pub fn reboot_check() {
     match status {
         Ok(s) => match s.code() {
             Some(0) => {
-                println!("Reboot check completed, no need to reboot!");
+                println!("{}", "Reboot check completed, no need to reboot!".green());
             }
             Some(1) => {
-                print!("Reboot check completed, needs to reboot. Proceed? [y/N]: ");
+                print!("{}", "Reboot check completed, needs to reboot. Proceed? [y/N]: ".yellow());
                 io::stdout().flush().unwrap();
                 let mut answer = String::new();
                 io::stdin().read_line(&mut answer).unwrap();
