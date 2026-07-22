@@ -23,13 +23,13 @@ It contains:
 
 On your Linux terminal, use these commands:
 
-git clone https://github.com/duduxico-dungeonmite/fedora-update.git
+`git clone https://github.com/duduxico-dungeonmite/fedora-update.git`
 
-cd fedora-update
+`cd fedora-update`
 
-cargo build --release
+`cargo build --release`
 
-sudo cp target/release/fedora-update /usr/local/bin/
+`sudo cp target/release/fedora-update /usr/local/bin/`
 
 
 ## Credits
