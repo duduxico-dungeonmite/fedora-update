@@ -1,7 +1,6 @@
 # fedora-update
 Fedora equivalent of "arch-update"!
 
-# RUST PORT IN DEVELOPMENT! Contributions on the `rust_port` branch are more than welcome!
 
 "fedora-update" is basically something akin to "arch-update" from Arch Linux, but you guessed it: for Fedora!
 
@@ -17,18 +16,26 @@ It contains:
 - Snapper
 - Btrfs
 - Flatpak (optional)
+- Cargo
+- Rust
 
 ## Installation
 
-git clone https://github.com/duduxico-dungeonmite/fedora-update.git
+On your Linux terminal, use these commands:
 
-cd fedora-update
+`git clone https://github.com/duduxico-dungeonmite/fedora-update.git`
 
-chmod +x fedora-update
-sudo cp fedora-update /usr/local/bin/
+`cd fedora-update`
 
-<img width="1920" height="656" alt="image" src="https://github.com/user-attachments/assets/59c21062-dc81-40d9-a73b-a3c291f0363b" />
-^ the tool working on my PC!
+`cargo build --release`
+
+`sudo cp target/release/fedora-update /usr/local/bin/`
+
+<img width="1920" height="611" alt="image" src="https://github.com/user-attachments/assets/05261381-a329-43ab-acc2-5e6884955e7a" />
+
+fedora-update working on my machine!
+
+
 
 ## Credits
 
