@@ -24,8 +24,11 @@ It contains:
 On your Linux terminal, use these commands:
 
 git clone https://github.com/duduxico-dungeonmite/fedora-update.git
+
 cd fedora-update
+
 cargo build --release
+
 sudo cp target/release/fedora-update /usr/local/bin/
 
 
