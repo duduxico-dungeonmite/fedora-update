@@ -5,6 +5,7 @@ use crate::snapshot::snapshot_make;
 use crate::update_dnf::update_dnf;
 use crate::update_flatpak::update_flatpak;
 use colored::Colorize;
+use nix::unistd::{Uid};
 mod update_dnf;
 mod quotes;
 mod update_flatpak;
@@ -14,6 +15,11 @@ mod snapshot;
 mod reboot;
 
 fn main() {
+
+    if !Uid::effective().is_root() {
+        eprintln!("{}", "This program must be run as root. Try: sudo fedora-update".red());
+        std::process::exit(1);
+    }
     println!("{}", "Hello, from fedora-update!".purple());
     snapshot_make();
     update_dnf();

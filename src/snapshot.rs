@@ -8,8 +8,8 @@ pub fn snapshot_make() {
 
     println!("{}", "Creating pre-update snapshot...".yellow());
 
-    let status = Command::new("sudo")
-        .args(["snapper", "-c", "root", "create", "-t", "pre", "--description", &desc])
+    let status = Command::new("snapper")
+        .args(["-c", "root", "create", "-t", "pre", "--description", &desc])
         .status();
     match status {
         Ok(s) if s.success() => println!("{}", format!("Snapshot created and saved as {}!",desc).yellow()),
