@@ -1,10 +1,11 @@
 # fedora-update
 Fedora equivalent of "arch-update"!
 
-
 "fedora-update" is basically something akin to "arch-update" from Arch Linux, but you guessed it: for Fedora!
 
-It contains:
+### Check out the [Wiki!](https://github.com/duduxico-dungeonmite/fedora-update/wiki)
+
+### It contains:
 - Snapper snapshot creation before the update
 - Updates to DNF and Flatpak packages
 - Package cache cleanup
