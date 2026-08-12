@@ -22,11 +22,11 @@ Fedora equivalent of "arch-update"!
 
 ## Installation
 
-# Installing from Fedora COPR:
+### Installing from Fedora COPR:
 `sudo dnf copr enable duduxico/fedora-update`
 `sudo dnf install fedora-update`
 
-# Compiling from source:
+### Compiling from source:
 
 `git clone https://github.com/duduxico-dungeonmite/fedora-update.git`
 
