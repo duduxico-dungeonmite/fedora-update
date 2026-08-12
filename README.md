@@ -9,7 +9,8 @@ Fedora equivalent of "arch-update"!
 - Snapper snapshot creation before the update
 - Updates to DNF and Flatpak packages
 - Package cache cleanup
-- Checks for reboots if needed!
+- Checks whether a reboot is required after updating
+- Privilege escalation (with sudo and doas)
 
 ## Requirements
 
@@ -17,8 +18,8 @@ Fedora equivalent of "arch-update"!
 - Snapper
 - Btrfs
 - Flatpak (optional)
-- Cargo
-- Rust
+- Cargo (only if compiling from source)
+- Rust (only if compiling from source)
 
 ## Installation
 
@@ -45,4 +46,4 @@ fedora-update working on my machine!
 
 ## Credits
 
-fedora-update is heavily inspired by Arch Linux maintainer Robin Candau (Antiz96)'s tool "arch-update" (https://github.com/Antiz96/arch-update). This project is not affiliated with Arch Linux, nor Antiz96.
+fedora-update is heavily inspired by Arch Linux maintainer Robin Candau (Antiz96)'s tool ["arch-update"](https://github.com/Antiz96/arch-update). This project is not affiliated with Arch Linux, nor Antiz96.
