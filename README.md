@@ -26,6 +26,8 @@
 
 - Btrfs
 
+- dnf-utils 
+
 - Flatpak (optional)
 
 - Cargo (only if compiling from source)
