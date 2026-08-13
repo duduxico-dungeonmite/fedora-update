@@ -22,7 +22,7 @@
 
 - Fedora (This was built using Fedora 44 KDE)
 
-- Snapper
+- Snapper (for snapshots, optional if you do not want it)
 
 - Btrfs
 
