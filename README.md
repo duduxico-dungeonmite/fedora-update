@@ -26,7 +26,7 @@
 
 - Btrfs
 
-- dnf-utils 
+- dnf-utils (for needs-restarting, the restarting checker)
 
 - Flatpak (optional)
 
