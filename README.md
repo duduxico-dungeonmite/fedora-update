@@ -1,6 +1,6 @@
 # fedora-update
 
-The Fedora equivalent of "arch-update" from Arch Linux.
+## The Fedora equivalent of "arch-update" from Arch Linux.
 
 "fedora-update" is essentially similar to "arch-update" from Arch Linux, but for Fedora.
 
@@ -36,19 +36,19 @@ The Fedora equivalent of "arch-update" from Arch Linux.
 
 ### Installing from Fedora COPR:
 
-sudo dnf copr enable duduxico/fedora-update
+`sudo dnf copr enable duduxico/fedora-update`
 
-sudo dnf install fedora-update
+`sudo dnf install fedora-update`
 
 ### Compiling from source:
 
-git clone https://github.com/duduxico-dungeonmite/fedora-update.git
+`git clone https://github.com/duduxico-dungeonmite/fedora-update.git`
 
-cd fedora-update
+`cd fedora-update`
 
-cargo build --release
+`cargo build --release`
 
-sudo cp target/release/fedora-update /usr/local/bin/
+`sudo cp target/release/fedora-update /usr/local/bin/`
 
 <img width="1920" height="611" alt="image" src="https://github.com/user-attachments/assets/05261381-a329-43ab-acc2-5e6884955e7a" />
 
