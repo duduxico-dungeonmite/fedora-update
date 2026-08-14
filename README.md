@@ -60,3 +60,5 @@ fedora-update working on my machine!
 
 fedora-update is heavily inspired by Arch Linux maintainer Robin Candau (Antiz96)'s tool ["arch-update"](https://github.com/Antiz96/arch-update). This project is not affiliated with Arch Linux, nor Antiz96.
 
+# Licensing
+This program is licensed under the GNU General Public License v3.0. It is written in Rust and contains elements of the Rust Standard Library, which is dual-licensed under the MIT License and the Apache License 2.0.
